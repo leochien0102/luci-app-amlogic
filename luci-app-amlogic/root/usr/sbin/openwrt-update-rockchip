@@ -118,6 +118,30 @@ case $MYDEVICE_NAME in
 		fi
 			SOC="e25"
 		;;
+	"HINLINK OWL H88K-V3 Board"|"Hlink H88K-V3")
+		if [ -n "${CURRENT_FDTFILE}" ] && [ "${CURRENT_FDTFILE}" != "rk3568-hinlink-h88k-v3.dtb" ];then
+			MYDTB_FDTFILE="${CURRENT_FDTFILE}"
+		else
+			MYDTB_FDTFILE="rk3588-hlink-h88k-v3.dtb"
+		fi
+			SOC="h88k-v3"
+		;;
+	"HINLINK OWL H88K Board"|"Hlink H88K")
+		if [ -n "${CURRENT_FDTFILE}" ] && [ "${CURRENT_FDTFILE}" != "rk3568-hinlink-h88k.dtb" ];then
+			MYDTB_FDTFILE="${CURRENT_FDTFILE}"
+		else
+			MYDTB_FDTFILE="rk3588-hlink-h88k.dtb"
+		fi
+			SOC="ak88/h88k"
+		;;
+	"Hlink H28K")
+		if [ -n "${CURRENT_FDTFILE}" ]; then
+			MYDTB_FDTFILE="${CURRENT_FDTFILE}"
+		else
+			MYDTB_FDTFILE="rk3528-hlink-h28k.dtb"
+		fi
+			SOC="h28k"
+		;;
 	"Ariaboard Photonicat")
 		if [ -n "${CURRENT_FDTFILE}" ]; then
 			MYDTB_FDTFILE="${CURRENT_FDTFILE}"
